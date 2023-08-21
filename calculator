@@ -1,0 +1,49 @@
+abstract class Calculator {
+    abstract int add(int a, int b);
+}
+
+class Adder extends Calculator {
+    @Override
+    int add(int a, int b) {
+        System.out.println("Adding integers: " + a + " " + b);
+        return a + b;
+    }
+}
+
+class Multiplier {
+    int multiply(int a, int b, Calculator calculator) {
+        int result = 0;
+        for (int i = 0; i < b; i++) {
+            result = calculator.add(result, a);
+        }
+        return result;
+    }
+}
+
+public class Solution {
+    public static void main(String[] args) {
+        Adder adder = new Adder();
+        Multiplier multiplier = new Multiplier();
+
+        int a = 7;
+        int b = 4;
+
+        System.out.println("Testing Addition");
+        int sum = adder.add(a, b);
+        System.out.println("Sum = " + sum);
+
+        System.out.println("Testing Multiplication");
+        int product = multiplier.multiply(a, b, adder);
+        System.out.println("Product = " + product);
+    }
+}
+output:
+Testing Addition
+Adding integers: 7 4
+Sum = 11
+Testing Multiplication
+Adding integers: 0 7
+Adding integers: 7 7
+Adding integers: 14 7
+Adding integers: 21 7
+Product = 28
