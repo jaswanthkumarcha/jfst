@@ -1,0 +1,22 @@
+public void foo(ArrayList<String> data)
+{
+ //some code
+}
+public void foo (ArrayList<Integer> data)
+{
+ //some code
+}
+public ArrayList<String> foo (ArrayList<String> data)
+{
+ //some code
+}
+private void foo(List<String> data)
+{
+ //some code
+}
+public void foo(ArrayList<String> data, boolean flag)
+{
+ //some code
+}
+output:
+foo(ArrayList)' clashes with 'foo(ArrayList)
