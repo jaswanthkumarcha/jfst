@@ -1,0 +1,33 @@
+abstract class Food { double proteins; double fats; double carbs; double tastyScore;
+
+abstract void getMacroNutrients();
+}
+
+class Egg extends Food { int tastyScore = 7; String type = "non-vegetarian";
+
+Egg(double proteins, double fats, double carbs) {
+    this.proteins = proteins;
+    this.fats = fats;
+    this.carbs = carbs;
+}
+
+void getMacroNutrients() {
+    System.out.println("An egg has " + this.proteins + " gms of protein, " +
+                       this.fats + " gms of fats and " + this.carbs + " gms of carbohydrates.");
+}
+}
+
+class Bread extends Food { int tastyScore = 8; String type = "vegetarian";
+
+Bread(double proteins, double fats, double carbs) {
+    this.proteins = proteins;
+    this.fats = fats;
+    this.carbs = carbs;
+}
+
+void getMacroNutrients() {
+    System.out.println("A slice of bread has " + this.proteins + " gms of protein, " +
+                       this.fats + " gms of fats and " + this.carbs + " gms of carbohydrates.");
+}
+output:
+ An egg has 6.3 gms of protein, 5.3 gms of fats and 0.6 gms of carbohydrates. Taste: 7 Egg is non-vegetarian
