@@ -1,21 +1,5 @@
 # jfst
- import java.util.*;
-2. class Priorities {
-3. public static void main(String[] args) {
-4. PriorityQueue toDo = new PriorityQueue();
-5. toDo.add("dishes");
-6. toDo.add("laundry");
-7. toDo.add("bills");
-8. toDo.offer("bills");
-9. System.out.print(toDo.size() + " " + toDo.poll());
-10. System.out.print(" " + toDo.peek() + " " +
-toDo.poll());
-11. System.out.println(" " + toDo.poll() + " " +
-toDo.poll());
-12. }
-13. }
-#output:
-3 bills dishes laundry null null
+
 
 #2)What is the result when one tries to compile and run the following code?
 public final static void main(String[] args){
